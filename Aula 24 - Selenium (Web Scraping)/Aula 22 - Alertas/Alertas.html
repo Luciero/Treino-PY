@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input, button {width: 150px; height: 30px;}
+    </style>
+</head>
+<body>
+    <div style="margin: 10px;">
+        <input type="button" value="Alerta Basico" onclick="alert('Formulario enviado com Sucesso!')">
+    </div>
+    <div style="margin: 10px">
+        <input type="button" value="Confirmacao" onclick="confirm('Quer confirmar a emissao da NF?')">
+    </div>
+    <div style="margin: 10px">
+        <button onclick="myFunction()" name="employeeLogin" >Alerta com Input</button>
+        <p id="msg"></p>
+    </div>
+</body>
+<script>
+    function myFunction(){
+        const cpf = prompt("Digite seu CPF para continuar!")
+
+        if (cpf == null || cpf == ""){
+            document.getElementById("msg").style.display = "none";
+        }else{
+            document.getElementById("msg").style.display = "block";
+            document.getElementById("msg").textContent = "CPF digitado: " + cpf;
+        }
+    }
+</script>
+</html>
